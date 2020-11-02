@@ -2,71 +2,16 @@ var generateBtn = document.querySelector("#generate");
 
 var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "?"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var lowerCaseLetters = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var upperCaseLetters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-var finalArray = []
-var length = 0
-var generatedPassword = ""
-var userWantsNumber = false
-var userWantsUppercase = false
-var userWantsLowercase = false
-var userWantsSpecial = false
+var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var finalArray = [];
+var length = 0;
+var generatedPassword = "";
+var userWantsNumber = false;
+var userWantsUppercase = false;
+var userWantsLowercase = false;
+var userWantsSpecial = false;
 function getUserInput() {
-  
   length = parseInt(prompt("How long would you like your password to be?"));
   console.log(length);
 
@@ -87,7 +32,7 @@ function getUserInput() {
 }
 
 function arrayCompiler(userWantsLowercase, userWantsUppercase, userWantsSpecial, userWantsNumber) {
-    finalArray = []
+    finalArray = [];
     if (userWantsLowercase) {
         for (var i = 0; i < lowerCaseLetters.length; i++) {
             finalArray.push (lowerCaseLetters[i]);
@@ -119,7 +64,7 @@ function arrayCompiler(userWantsLowercase, userWantsUppercase, userWantsSpecial,
     arraySquisher();
 }
 
-var passwordArray = []
+var passwordArray = [];
 function arraySquisher() {
     console.log(length);
     for (var i = 0; i < length; i++) {
@@ -129,7 +74,7 @@ function arraySquisher() {
     }
     generatedPassword = passwordArray.join("");
     console.log(generatedPassword);
-    document.querySelector("#password").value = generatedPassword
+    document.querySelector("#password").value = generatedPassword;
 }
 
 generateBtn.addEventListener("click", getUserInput);

@@ -32,3 +32,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ![](images/Password-Generator.png)
+
+## Deployment Link
+
+https://chriscooley1.github.io/Password-Generator-HW3/
